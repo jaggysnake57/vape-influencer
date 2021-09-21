@@ -1,0 +1,22 @@
+@use './vars' as *;
+
+@mixin button {
+	padding: 1rem 2rem;
+	background: none;
+	border-radius: 12px;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+@mixin button-main {
+	@include button;
+	background-color: $clr-secondary;
+	border: none;
+	color: white;
+}
+
+@mixin button-alt {
+	@include button;
+	border: solid 3px $clr-secondary;
+	color: $clr-secondary;
+}
