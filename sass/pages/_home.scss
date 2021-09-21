@@ -73,6 +73,10 @@ header {
 		font-size: 1.3em;
 		text-align: center;
 		cursor: pointer;
+		transition: opacity 0.3;
+		&:hover {
+			opacity: 0.7;
+		}
 	}
 	.btn-primary {
 		width: 100%;

@@ -36,9 +36,13 @@ h3 {
   text-align: center;
   cursor: pointer;
   text-decoration: none;
+  transition: opacity;
   background-color: #ff6200;
   border: none;
   color: white;
+}
+.btn-primary:hover {
+  opacity: 0.7;
 }
 
 .btn-alt {
@@ -51,8 +55,12 @@ h3 {
   text-align: center;
   cursor: pointer;
   text-decoration: none;
+  transition: opacity;
   border: solid 3px #ff6200;
   color: #ff6200;
+}
+.btn-alt:hover {
+  opacity: 0.7;
 }
 
 .section-title {
@@ -144,6 +152,10 @@ header.scrolled {
   font-size: 1.3em;
   text-align: center;
   cursor: pointer;
+  transition: opacity 0.3;
+}
+.main-navigation a:hover {
+  opacity: 0.7;
 }
 .main-navigation .btn-primary {
   width: 100%;
