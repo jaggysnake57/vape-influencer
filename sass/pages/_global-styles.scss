@@ -35,17 +35,19 @@ h3 {
 }
 
 .section-title {
-	font-size: 2.3em;
+	font-size: clamp(2em, calc(5vw + 1rem), 5em);
 	text-transform: uppercase;
 	text-align: center;
 	position: relative;
+	color: $clr-main;
 	span {
 		position: absolute;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		font-size: 2.6em;
+		font-size: clamp(2em, calc(12vw + 1rem), 3em);
 		color: $clr-accent;
 		z-index: -1;
+		white-space: nowrap;
 	}
 }

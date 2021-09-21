@@ -83,7 +83,8 @@ header {
 	background-size: 125%;
 	background-position: right top;
 	background-repeat: no-repeat;
-	min-height: 100vh;
+	margin-bottom: 5rem;
+
 	@include mq(large) {
 		background-image: url('../../assets/images/Header_Home_Desktop.jpg');
 		background-size: contain;

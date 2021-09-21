@@ -56,19 +56,21 @@ h3 {
 }
 
 .section-title {
-  font-size: 2.3em;
+  font-size: clamp(2em, calc(5vw + 1rem), 5em);
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  color: #07223f;
 }
 .section-title span {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.6em;
+  font-size: clamp(2em, calc(12vw + 1rem), 3em);
   color: #f1f2f2;
   z-index: -1;
+  white-space: nowrap;
 }
 
 /*=============================================
@@ -154,7 +156,7 @@ header .container {
   background-size: 125%;
   background-position: right top;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  margin-bottom: 5rem;
 }
 @media (min-width: 75em) {
   .hero {
@@ -195,3 +197,57 @@ header .container {
 }
 
 /*=====  End of hero section  ======*/
+.carousel {
+  position: relative;
+}
+.carousel__page-dots {
+  display: flex;
+}
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border: solid 2px #07223f;
+  border-radius: 100px;
+}
+.carousel__dot.selected {
+  background-color: #ff6200;
+}
+.carousel__item {
+  background-color: #07223f;
+  color: white;
+  position: absolute;
+  padding: 2rem;
+}
+
+.card__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card__title span {
+  color: #ff6200;
+}
+.card__slug {
+  text-align: center;
+  max-width: 30rem;
+}
+.card__info {
+  display: grid;
+  grid-template-areas: "main-point sub-point-1" "main-point sub-point-2";
+}
+.card__main-point {
+  border: solid 7px #ff6200;
+  border-radius: 200px;
+  text-align: center;
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card__main-point h3 {
+  font-size: 3em;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+}
