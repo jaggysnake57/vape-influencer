@@ -199,13 +199,20 @@ header .container {
 /*=====  End of hero section  ======*/
 .carousel {
   position: relative;
+  height: 600px;
 }
 .carousel__page-dots {
   display: flex;
+  justify-content: space-between;
+  width: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .carousel__dot {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border: solid 2px #07223f;
   border-radius: 100px;
 }
@@ -215,8 +222,13 @@ header .container {
 .carousel__item {
   background-color: #07223f;
   color: white;
-  position: absolute;
   padding: 2rem;
+  position: absolute;
+  width: 90%;
+  max-width: 50rem;
+  min-width: 38rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .card__title {
@@ -230,10 +242,16 @@ header .container {
 .card__slug {
   text-align: center;
   max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.4em;
 }
 .card__info {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "main-point sub-point-1" "main-point sub-point-2";
+  place-items: center;
 }
 .card__main-point {
   border: solid 7px #ff6200;
@@ -245,9 +263,54 @@ header .container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  grid-area: main-point;
 }
 .card__main-point h3 {
   font-size: 3em;
   text-transform: uppercase;
   line-height: 2.5rem;
+}
+.card__sub-point {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__sub-point p {
+  max-width: 12ch;
+  text-align: center;
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+}
+.card__bullet-point {
+  border-radius: 500px;
+  background-color: pink;
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  flex: 1;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+.card__bullet-point--orange {
+  background-color: #ff6200;
+  color: white;
+  grid-area: sub-point-1;
+}
+.card__bullet-point--white {
+  background-color: white;
+  color: #ff6200;
+}
+
+.back-left {
+  transform: scale(80%) translateX(-900px);
+  opacity: 0.5;
+}
+
+.back-right {
+  transform: scale(80%) translateX(-50px);
+  opacity: 0.5;
+  z-index: -1;
 }
