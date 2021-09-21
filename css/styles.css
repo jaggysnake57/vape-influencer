@@ -99,6 +99,20 @@ header .container {
   height: 5px;
   border-radius: 100px;
   background-color: white;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.menu-button.button-close div {
+  background-color: red;
+}
+.menu-button.button-close div:nth-of-type(1) {
+  transform: rotate(45deg) translateY(17px);
+}
+.menu-button.button-close div:nth-of-type(3) {
+  transform: rotate(-45deg) translateY(-17px);
+}
+.menu-button.button-close div:nth-of-type(2) {
+  transform: translateX(-50px);
+  opacity: 0;
 }
 @media (min-width: 75em) {
   .menu-button {
@@ -113,9 +127,11 @@ header .container {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  transform: translateY(-150%);
+  width: 90%;
+  transform: translate(-110%, 60%);
   padding: 1rem;
+  left: 5%;
+  transition: transform 0.3s;
 }
 .main-navigation a {
   color: #07223f;
@@ -124,6 +140,9 @@ header .container {
   font-size: 1.3em;
   text-align: center;
   cursor: pointer;
+}
+.main-navigation .btn-primary {
+  width: 100%;
 }
 @media (min-width: 75em) {
   .main-navigation {
@@ -144,7 +163,7 @@ header .container {
 }
 
 .main-navigation.open {
-  transform: translateY(60%);
+  transform: translate(0, 60%);
 }
 
 /*=====  End of header  ======*/
@@ -229,6 +248,7 @@ header .container {
   min-width: 38rem;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 1s;
 }
 
 .card__title {
@@ -307,6 +327,7 @@ header .container {
 .back-left {
   transform: scale(80%) translateX(-900px);
   opacity: 0.5;
+  z-index: -1;
 }
 
 .back-right {

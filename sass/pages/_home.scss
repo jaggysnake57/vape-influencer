@@ -26,6 +26,23 @@ header {
 		height: 5px;
 		border-radius: 100px;
 		background-color: white;
+
+		transition: transform 0.3s, opacity 0.3s;
+	}
+	&.button-close {
+		div {
+			background-color: red;
+		}
+		div:nth-of-type(1) {
+			transform: rotate(45deg) translateY(17px);
+		}
+		div:nth-of-type(3) {
+			transform: rotate(-45deg) translateY(-17px);
+		}
+		div:nth-of-type(2) {
+			transform: translateX(-50px);
+			opacity: 0;
+		}
 	}
 	@include mq(large) {
 		display: none;
@@ -39,9 +56,11 @@ header {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	transform: translateY(-150%);
+	width: 90%;
+	transform: translate(-110%, 60%);
 	padding: 1rem;
+	left: 5%;
+	transition: transform 0.3s;
 	a {
 		color: $clr-main;
 		text-decoration: none;
@@ -49,6 +68,9 @@ header {
 		font-size: 1.3em;
 		text-align: center;
 		cursor: pointer;
+	}
+	.btn-primary {
+		width: 100%;
 	}
 	@include mq(large) {
 		position: relative;
@@ -69,7 +91,7 @@ header {
 }
 
 .main-navigation.open {
-	transform: translateY(60%);
+	transform: translate(0, 60%);
 }
 
 /*=====  End of header  ======*/

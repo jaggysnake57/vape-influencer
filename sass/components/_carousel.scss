@@ -34,6 +34,7 @@
 		min-width: 38rem;
 		left: 50%;
 		transform: translateX(-50%);
+		transition: all 1s;
 	}
 }
 .card {
@@ -120,6 +121,7 @@
 .back-left {
 	transform: scale(80%) translateX(-900px);
 	opacity: 0.5;
+	z-index: -1;
 }
 .back-right {
 	transform: scale(80%) translateX(-50px);
