@@ -1,11 +1,15 @@
 @use './vars' as *;
 
 @mixin button {
-	padding: 1rem 2rem;
+	padding: 1rem 0;
+	width: 13rem;
 	background: none;
 	border-radius: 12px;
 	font-size: 1.1em;
 	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 @mixin button-main {

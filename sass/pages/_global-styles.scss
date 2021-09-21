@@ -8,19 +8,23 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color: $clr-main;
 }
 
 h1,
 h2,
 h3 {
-	font-family: $fnt-roboto-con;
+	font-family: $fnt-saria;
 	font-weight: 700;
 }
 
 .container {
 	width: 90%;
 	margin: 0 auto;
+	@include mq(large) {
+		width: 80%;
+
+		max-width: 1400px;
+	}
 }
 
 .btn-primary {

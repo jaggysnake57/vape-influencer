@@ -6,13 +6,13 @@
 
 header {
 	padding: 2rem 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-}
-.brand {
-	position: relative;
+	position: fixed;
+	width: 100%;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 
 .menu-button {
@@ -20,11 +20,15 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 29px;
+	width: fit-content;
 	div {
 		width: 40px;
 		height: 5px;
 		border-radius: 100px;
 		background-color: white;
+	}
+	@include mq(large) {
+		display: none;
 	}
 }
 
@@ -38,13 +42,29 @@ header {
 	width: 100%;
 	transform: translateY(-150%);
 	padding: 1rem;
-
 	a {
 		color: $clr-main;
 		text-decoration: none;
 		margin-bottom: 1.3rem;
 		font-size: 1.3em;
 		text-align: center;
+		cursor: pointer;
+	}
+	@include mq(large) {
+		position: relative;
+		transform: translate(0);
+		background: none;
+		border: none;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+
+		a {
+			color: white;
+			font-size: 1rem;
+			margin-left: 1.5rem;
+			font-weight: 500;
+		}
 	}
 }
 
@@ -53,3 +73,50 @@ header {
 }
 
 /*=====  End of header  ======*/
+
+/*=============================================
+=            hero section            =
+=============================================*/
+
+.hero {
+	background-image: url('../../assets/images/Header_Home_Mobile.jpg');
+	background-size: 125%;
+	background-position: right top;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	@include mq(large) {
+		background-image: url('../../assets/images/Header_Home_Desktop.jpg');
+		background-size: contain;
+	}
+	&__content {
+		padding-top: 150%;
+		@include mq(large) {
+			padding-top: 25%;
+			width: 40%;
+		}
+	}
+	&__title {
+		font-size: 6.5em;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 6rem;
+		color: $clr-main;
+		margin-bottom: 2rem;
+		span {
+			color: $clr-secondary;
+		}
+	}
+	&__tagline {
+		font-size: 1.2em;
+		color: $clr-font;
+		margin-bottom: 1rem;
+		line-height: 1.4rem;
+	}
+	&__button-wrapper {
+		padding: 0.3rem;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+/*=====  End of hero section  ======*/
