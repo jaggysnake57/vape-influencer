@@ -80,6 +80,7 @@ header {
   padding: 2rem 0;
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 header .container {
   display: flex;
@@ -145,6 +146,11 @@ header .container {
   width: 100%;
 }
 @media (min-width: 75em) {
+  .main-navigation .btn-primary {
+    width: 13rem;
+  }
+}
+@media (min-width: 75em) {
   .main-navigation {
     position: relative;
     transform: translate(0);
@@ -157,7 +163,7 @@ header .container {
   .main-navigation a {
     color: white;
     font-size: 1rem;
-    margin-left: 1.5rem;
+    margin-left: 1.1rem;
     font-weight: 500;
   }
 }
@@ -180,7 +186,7 @@ header .container {
 @media (min-width: 75em) {
   .hero {
     background-image: url("../../assets/images/Header_Home_Desktop.jpg");
-    background-size: contain;
+    background-size: 95%;
   }
 }
 .hero__content {
